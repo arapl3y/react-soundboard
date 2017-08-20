@@ -7,22 +7,39 @@ const SoundBox = styled.div`
   margin: 20px;
   background-color: salmon;
   border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 class Sound extends Component {
- 
-  play = (e) => {
-    const audio = e.target.querySelector('audio');
+  play = () => {
+    const audio = document.querySelector(`#${this.props.name}`);
     if (audio) {
+      audio.currentTime = 0;
       audio.play();
     }
+  };
+
+  componentDidMount() {
+    document.body.addEventListener("keypress", e => {
+      if (e.key === this.props.letter) {
+        this.play();
+      }
+    });
   }
- 
+
   render() {
     return (
-      <SoundBox onClick={this.play}>
-        <span>{this.props.name}</span>
-        <audio src={this.props.url}></audio>
+      <SoundBox
+        tabindex="0"
+        onClick={this.play}
+        onKeyPressCapture={this.keyPress}
+      >
+        <span>
+          {this.props.name}
+        </span>
+        <audio id={this.props.name} src={this.props.url} />
       </SoundBox>
     );
   }

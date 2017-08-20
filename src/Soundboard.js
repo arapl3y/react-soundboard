@@ -16,15 +16,15 @@ class Soundboard extends Component {
     super();
     this.state = {
       sounds: [
-        {name: "Boom", url: "sounds/boom.wav"},
-        {name: "Clap", url: "sounds/clap.wav"},
-        {name: "Hihat", url: "sounds/hihat.wav"},
-        {name: "Kick", url: "sounds/kick.wav"},
-        {name: "Openhat", url: "sounds/openhat.wav"},
-        {name: "Ride", url: "sounds/ride.wav"},
-        {name: "Snare", url: "sounds/snare.wav"},
-        {name: "Tink", url: "sounds/tink.wav"},
-        {name: "Tom", url: "sounds/tom.wav"}
+        {name: "Boom", url: "sounds/boom.wav", letter: "q"},
+        {name: "Clap", url: "sounds/clap.wav", letter: "w"},
+        {name: "Hihat", url: "sounds/hihat.wav", letter: "e"},
+        {name: "Kick", url: "sounds/kick.wav", letter: "r"},
+        {name: "Openhat", url: "sounds/openhat.wav", letter: "t"},
+        {name: "Ride", url: "sounds/ride.wav", letter: "a"},
+        {name: "Snare", url: "sounds/snare.wav", letter: "s"},
+        {name: "Tink", url: "sounds/tink.wav", letter: "d"},
+        {name: "Tom", url: "sounds/tom.wav", letter: "f"}
       ]
     };
   }
@@ -33,7 +33,9 @@ class Soundboard extends Component {
     return (
       <SoundContainer>
         {this.state.sounds.map(s => {
-          return <Sound key={s.name} name={s.name} url={s.url} />;
+          return (
+            <Sound key={s.name} name={s.name} url={s.url} letter={s.letter} />
+          );
         })}
       </SoundContainer>
     );
