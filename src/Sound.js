@@ -10,20 +10,22 @@ const SoundBox = styled.div`
 `;
 
 class Sound extends Component {
+ 
+  play = (e) => {
+    const audio = e.target.querySelector('audio');
+    if (audio) {
+      audio.play();
+    }
+  }
+ 
   render() {
     return (
-      <SoundBox>
-        {this.props.name}
+      <SoundBox onClick={this.play}>
+        <span>{this.props.name}</span>
+        <audio src={this.props.url}></audio>
       </SoundBox>
     );
   }
 }
-
-// const Sound = props =>
-//   <SoundWrapper>
-//     <p>
-//       {props.url}
-//     </p>
-//   </SoundWrapper>;
 
 export default Sound;
