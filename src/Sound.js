@@ -5,11 +5,13 @@ const SoundBox = styled.div`
   width: 200px;
   height: 200px;
   margin: 20px;
-  background-color: salmon;
+  background-color: SpringGreen;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 class Sound extends Component {
@@ -36,9 +38,10 @@ class Sound extends Component {
         onClick={this.play}
         onKeyPressCapture={this.keyPress}
       >
-        <span>
-          {this.props.name}
-        </span>
+        {this.props.name}   
+        <br/> 
+        <br/> 
+        ({this.props.letter})
         <audio id={this.props.name} src={this.props.url} />
       </SoundBox>
     );
