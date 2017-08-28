@@ -16,8 +16,8 @@ class Soundboard extends Component {
     super();
     this.state = {
       sounds: [
-        {name: "Boom", url: "sounds/boom.wav", letter: "q"},
-        {name: "Clap", url: "sounds/clap.wav", letter: "w"},
+        {name: "Air Horn", url: "sounds/air-horn.mp3", letter: "q"},
+        {name: "MAD DOG", url: "sounds/MAD-DOG.mp3", letter: "w"},
         {name: "Hihat", url: "sounds/hihat.wav", letter: "e"},
         {name: "Kick", url: "sounds/kick.wav", letter: "r"},
         {name: "Openhat", url: "sounds/openhat.wav", letter: "t"},
