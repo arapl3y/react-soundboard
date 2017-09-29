@@ -46,6 +46,11 @@ class Soundboard extends Component {
         {name: "Larry-Sanders", url: "sounds/larry-sanders-hey-now.mp3", letter: "c"},
         {name: "Musculature", url: "sounds/musculature.mp3", letter: "v"},
         {name: "Sheeit", url: "sounds/sheeit.mp3", letter: "b"},
+        {name: "Burner", url: "sounds/burner.mp3", letter: "n"},
+        {name: "Chicken", url: "sounds/chicken.mp3", letter: "m"},
+        {name: "Cocaine", url: "sounds/cocaine.mp3", letter: ","},
+        {name: "Happy-Friday", url: "sounds/happy-friday.mp3", letter: "."},
+        {name: "Johnny-Hurt-You", url: "sounds/johnny_hurt_you.mp3", letter: "/"},
       ]
     };
   }
